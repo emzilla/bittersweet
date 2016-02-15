@@ -1,0 +1,127 @@
+//==================================================================
+// Home Page Partial
+// Styles for the home page.
+//==================================================================
+
+.home .site-main {
+    top: 0;
+}
+
+.home .site-header {
+   z-index: 100;
+}
+
+// Hero
+// =================================================================
+
+.hero {
+   @include media($desktop) {
+        background: url('../img/bg_hero.jpg') no-repeat center;
+        background-size: cover;
+   }
+   .hero-content {
+        margin: 0 20px;
+        padding: 50px;
+        background-color: $brand_tertiary;
+        color: $reverse_text_color;
+        @include media($desktop) {            
+            margin: 450px auto 60px;   
+        }
+
+        h1, h2 {
+            color: $reverse_text_color;
+        }
+        h1 {
+            font-size: rem(28px);
+        }
+        h2 {
+            font-size: rem(22px);
+        }
+   }
+}
+
+// Homepage Content
+// =================================================================
+
+.homepage-content {
+    margin: 50px 0;
+
+    .content-column {
+        padding: 20px 40px;
+        text-align: center;
+        @include media($tablet) {
+            @include span-columns(6);
+            @include omega;
+        }
+        h2 {
+            border-bottom: 1px solid $brand_secondary;
+        }
+    }
+}
+
+// Menu CTA
+// =================================================================
+
+.cta {
+    position: relative;
+    @include media($tablet) {
+        top: 50px;
+        z-index: 300;
+    }   
+}
+
+.cta-content {
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include media($tablet) {
+        border-bottom: none;
+        background: url('../img/bg_menu-cta.png') no-repeat center;
+        height: 376px;
+        width: 730px;
+        margin: 0 auto;
+    }
+   .button {
+    }
+}
+
+// Instagram Feed
+// =================================================================
+
+.instagram-feed {
+    display: none;
+    @include media($tablet) {
+        display: block;
+        @include clearfix;
+        background: rgba($mint_green,.5);
+        position: relative;
+    }
+    .follow-us {
+        @include media($tablet) {
+            @include position-vertical;
+            z-index: 2;
+            color: $reverse-text-color;
+            font-family: $header_font_family;
+            font-size: rem(30px);
+            text-transform: uppercase;
+            width:33%;
+            text-align: center;
+            line-height: 1;
+        }
+        @include media($desktop) {
+            font-size: rem(50px);
+        }
+    }
+    .feed-image {
+        @include media($tablet) {
+            float: left;
+            display: inline-block;
+            width: 25%;
+            position: relative;
+            z-index: -1;
+        }
+    }
+}
+
+
+

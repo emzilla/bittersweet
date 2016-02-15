@@ -1,0 +1,68 @@
+//==================================================================
+// Menu Page Partial
+// Styles for the menu page.
+//==================================================================
+
+.page-template-page-menu .content-wrapper{
+	max-width: 1000px;
+}
+
+.menu-row {
+	text-align: center;
+}
+
+.menu-category {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	margin: 40px;
+	
+	@include media($tablet) {
+		padding: 50px;
+		
+		height: 215px;
+		width: 395px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&.cocktails {
+		
+		@include media($tablet) {
+			background-image: url('../img/bg_menu-cocktail.png');
+			width: 570px;
+		}
+	}
+
+	&.desserts {
+
+		@include media($tablet) {
+			background-image: url('../img/bg_menu-desserts.png');
+		}
+	}
+
+	&.coffee {
+		
+		@include media($tablet) {
+			background-image: url('../img/bg_menu-coffee.png');
+		}
+	}
+
+	&.morning {
+		
+		@include media($tablet) {
+			background-image: url('../img/bg_menu-morning.png');
+		}
+	}
+
+	&.catering {
+		
+		@include media($tablet) {
+			background-image: url('../img/bg_menu-catering.png');
+		}
+	}
+
+	.button {
+		background-color: $brand_tertiary;
+	}
+}

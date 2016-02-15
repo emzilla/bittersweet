@@ -1,0 +1,45 @@
+//==================================================================
+// Footer Partial
+// Styles for footer layout.
+//==================================================================
+
+// Footer
+// =================================================================
+.site-footer {
+	@include clearfix;
+	padding: 20px;
+	transition: all .3s ease;
+	font-family: $header_font_family;
+	text-transform: uppercase;
+	color: $brand_accent_1;
+	text-align: center;
+
+	@include media($tablet) {
+		text-align: left;
+	}
+
+	.footer-border {
+		border-top: 1px solid $brand_accent_1;
+	}
+
+	.business-info,
+	.social-menu {
+		@include media($tablet) {
+			@include span-columns(6);
+			@include omega;
+		}
+	}
+
+	.social-menu {
+		@include media($tablet) {
+			text-align: right;
+		}
+	}
+}
+
+
+
+.site-info {
+	clear: both;
+	text-align: center;
+}

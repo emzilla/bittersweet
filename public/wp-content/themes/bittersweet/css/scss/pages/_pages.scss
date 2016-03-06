@@ -18,4 +18,5 @@
 
 .entry-content {
 	margin: 40px 0;
+	@include clearfix;
 }

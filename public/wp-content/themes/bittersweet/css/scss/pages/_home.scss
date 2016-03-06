@@ -44,7 +44,7 @@
 // =================================================================
 
 .homepage-content {
-    margin: 50px 0;
+    margin: 50px 0 0;
 
     .content-column {
         padding: 20px 40px;
@@ -93,14 +93,14 @@
     @include media($tablet) {
         display: block;
         @include clearfix;
-        background: rgba($mint_green,.5);
+        background: rgba($brand_primary,.5);
         position: relative;
     }
     .follow-us {
         @include media($tablet) {
             @include position-vertical;
             z-index: 2;
-            color: $reverse-text-color;
+            color: $text_color;
             font-family: $header_font_family;
             font-size: rem(30px);
             text-transform: uppercase;

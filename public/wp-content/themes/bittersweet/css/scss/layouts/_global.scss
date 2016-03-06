@@ -19,7 +19,10 @@ body {
 
 .site-main {
 	position: relative;
-	top: 40px;
+	
+	@include media($desktop) {
+		top: 40px;
+	}
 }
 
 .wrapper {

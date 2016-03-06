@@ -1,0 +1,30 @@
+//==================================================================
+// Gallery Page Partial
+// Styles for the Gallery Page.
+//==================================================================
+
+.gallery-item {
+
+	width: 33.333%;
+	display: inline-block;
+	
+	@include media($tablet) {
+		margin: 10px 0;
+		width: 25%;	
+	}
+
+	@include media($desktop) {
+		
+	}
+}
+
+.gallery-icon {
+	text-align: center;
+}
+
+// Featherlight Overrides
+
+body .featherlight .featherlight-content {
+	padding: 0;
+	border-bottom: none;
+}

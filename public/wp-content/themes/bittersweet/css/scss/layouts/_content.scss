@@ -9,7 +9,7 @@
 	padding: 0 5%;
 	transition: all .5s ease;	
 	@include media($desktop) {
-		padding: 0;	
+		padding: 0 0 60px;	
 		transition: all .5s ease;	
 	}
 }

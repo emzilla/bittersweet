@@ -45,6 +45,7 @@
 	// 5. Import Pages
 	// -------------------------------------------------------------
 	@import "pages/404";
+	@import "pages/gallery";
 	@import "pages/home";
 	@import "pages/menu";
 	@import "pages/posts";
@@ -54,6 +55,7 @@
 	// 6. Import Vendors
 	// -------------------------------------------------------------
 	@import "vendors/eventscalendar";
+	@import "vendors/featherlight";
 	// @import "vendors/owlcarousel";
 	// @import "vendors/owltheme";
 	// @import "vendors/owltransitions";

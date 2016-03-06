@@ -30,7 +30,7 @@
 		</div>
 		<div class="menu-row">
 			<div class="menu-category morning">
-				<a href="/menu/button" class="button cta-text">Morning</a>
+				<a href="/menu/morning" class="button cta-text">Morning</a>
 			</div>
 		</div>
 

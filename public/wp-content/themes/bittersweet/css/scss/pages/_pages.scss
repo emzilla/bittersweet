@@ -17,6 +17,10 @@
 }
 
 .entry-content {
-	margin: 40px 0;
+	margin: 40px 0px;
 	@include clearfix;
+	word-wrap: break-word;
+	@include media($desktop) {
+		margin: 40px 80px;
+	}
 }

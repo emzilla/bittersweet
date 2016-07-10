@@ -18,9 +18,7 @@
 
 <body  <?php body_class(); ?>>
 
-<div id="push-container" class="push-container">
-
-<div id="page" class="hfeed site menu-push">
+<div id="page" class="hfeed site">
 	<a class="skip-link visuallyhidden" href="#content"><?php _e( 'Skip to content' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -38,8 +36,10 @@
 						</a>
 				
 			</div>
-
-		<!-- 	<a href="#menu" class="menu-toggle">Menu</a> -->
+			<div class="small-menu" style="display: none;">
+				
+			</div>
+			<a href="#menu" class="menu-toggle">Menu</a>
 			<div class="large-menu">
 				<?php if ( has_nav_menu('primary') ): ?>
 					<nav class="primary">

@@ -10,9 +10,7 @@
 
 // Button
 // =================================================================
-input[type="submit"], button, a.button {}
-
-.button {
+input[type="submit"], button, .button {
     background: $button_background;
     padding: $button_padding;
     color: $button_text_color;
@@ -20,14 +18,10 @@ input[type="submit"], button, a.button {}
     text-decoration: none;
     font-family: $header_font_family;
     font-weight: $header_font_weight;
-    font-size: rem(30px);
+    font-size: rem(22px);
     text-decoration: none;
 
     &:hover {
 		color: $button_text_color;
-    }
-
-    @include media($tablet) {
-        @include position-vertical;
     }
 }

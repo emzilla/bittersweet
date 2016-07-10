@@ -18,8 +18,8 @@
 
 			<div class="business-info">
 				<p>Bittersweet<br />
-				15 E. Martin Street<br />
-				Raleigh, NC 27603<br />
+				16 E. Martin Street,<br />
+				Raleigh, NC 27601<br />
 				(919) 977-3829</p>
 			</div>
 			
@@ -49,8 +49,6 @@
 
 
 </div><!-- .site -->
-
-</div><!-- .push-container -->
 <?php wp_footer(); ?>
 
 </body>

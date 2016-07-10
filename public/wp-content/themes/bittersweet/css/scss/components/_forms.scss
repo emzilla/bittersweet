@@ -60,8 +60,13 @@ form {}
 
 	// Fields
 	//--------------------------------------------------------------
-	input {
+	input, textarea {
 		
+		background: rgba($brand_secondary, 0.3);
+		border: none;
+		padding: 10px;
+		color: $text_color;
+
 		// Checkbox & Radio
 		&[type="checkbox"], &[type="radio"] {}
 		&[type="checkbox"]:focus, &[type="radio"]:focus {}
@@ -76,7 +81,9 @@ form {}
 		&[type="file"] {}
 
 		// Focus
-		&:focus {}
+		&:focus {
+			border-bottom: 2px solid $brand_secondary;
+		}
 
 	}
 

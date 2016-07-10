@@ -21,7 +21,6 @@
 		position: relative;
 		top: 2px;
 		right: 5px;
-		background: url(../img/arrow.svg) no-repeat center;
 		background-size: 16px;
 	}
 }
@@ -33,22 +32,16 @@
 	}
 }
 
-.responsive-menu {
-	nav.primary {
-		position: absolute;
-		top: 0;
-		right: 0;
-		visibility: hidden;
-		width: 300px;
-		height: 100%;
-		transition: all 0.5s;
+.small-menu {
+
+	@include media($desktop) {
+		display: none;
 	}
-
-
 	//Style inside of menu
 	nav.primary .menu {
 		padding: 0;
 		margin: 0;
+		background: $brand_tertiary;
 		.menu-item {
 			list-style: none;
 			a {
@@ -56,10 +49,7 @@
 				font-size: rem(16px);
 				padding: 20px;
 				display: block;
-				&:hover {
-					background: tint($brand_secondary, 10%);
-					color: $reverse_text_color;
-				}
+				color: $reverse_text_color;
 			}
 		&:last-child {
 			border-bottom: none;
@@ -67,39 +57,16 @@
 		}
 	}
 
-	.sub-menu {
-		display: none;
-		padding: 0 0 0 10px;
-		margin: 0;
-	}
-
-	.menuOpen {
-		nav.primary {
-			visibility: visible;
-			transition: all 0.5s;
-			z-index: 1;
-		}
-	}
-	
-	.menu-push {
-		position: relative;
-		right: 0;
-		z-index: 99;
-		height: 100%;
-		transition: transform 0.5s;
-	}
-
-	.menuOpen {
-		.menu-push {
-			transform: translate3d(-300px, 0, 0);
-		}
-	}
 }
 
 
 
 .large-menu nav.primary {
 	background: $brand_tertiary;
+	display: none;
+	@include media($desktop) {
+		display: block;
+	}
 	.menu {
 		list-style: none;
 		padding: 0;

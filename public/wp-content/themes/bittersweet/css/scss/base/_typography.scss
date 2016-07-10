@@ -3,12 +3,6 @@
 // Styles for overall typography and misc. content components.
 //==================================================================
 
-
-// Custom Fonts
-// =================================================================
-
-
-
 // Global
 // =================================================================
 html, body {
@@ -16,8 +10,8 @@ html, body {
 	font-size: $paragraph_font_size;
 	color: $text_color;
 	line-height: $base_line_height;
-	letter-spacing: 1px;
-	font-weight: 100;
+	letter-spacing: rem(1.25px);
+	font-weight: $paragraph_font_weight;
 }
 hr {}
 

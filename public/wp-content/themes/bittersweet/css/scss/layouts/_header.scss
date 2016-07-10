@@ -19,16 +19,16 @@
 	background: url('../img/l_bittersweet.png') no-repeat center;
 	background-size: 80%;
 	display: block;
-	height: 110px;
-	width: 298px;
+	height: 68px;
+	width: 295px;
 	@include hide-text;
-	margin: 20px auto;
+	margin: 0px auto;
 	transition: all .3s ease;
 	@include media($tablet) {
 		background-size: 100%;
-		margin: 0px auto;
 		position: relative;
-    	top: 20px;
+		height: 100px;
+		width: 350px;
 	}
 }
 

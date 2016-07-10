@@ -3,8 +3,9 @@
 // Styles for the menu page.
 //==================================================================
 
-.page-template-page-menu .content-wrapper{
-	max-width: 1000px;
+
+.menu.entry-content {
+	margin: 0;
 }
 
 .menu-row {
@@ -15,7 +16,7 @@
 	position: relative;
 	display: inline-block;
 	text-align: center;
-	margin: 40px;
+	margin: 30px 25px;
 	
 	@include media($tablet) {
 		padding: 50px;
@@ -64,5 +65,9 @@
 
 	.button {
 		background-color: $brand_tertiary;
+		font-size: rem(28px);
+		@include media($tablet) {
+            @include position-vertical;
+        }
 	}
 }

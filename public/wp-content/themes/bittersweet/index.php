@@ -18,29 +18,7 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 			<div class="home-content">
-				<?php 
-				$wp_query = new WP_Query( 
-					array(
-						'posts_per_page' => 9
-					)
-				 ); ?>
-
-				<?php if ( $wp_query->have_posts() ) : ?>
-
-				<?php
-				// Start the loop.
-				while ( $wp_query->have_posts() ) : $wp_query->the_post();
-
-					get_template_part( 'content', 'home' );
-
-				// End the loop.
-				endwhile;
-
-				// If no content, include the "No posts found" template.
-				else :
-					get_template_part( 'content', 'none' );
-
-				endif; ?>	
+		<?php get_template_part( 'content', 'home' ); ?>	
 			</div>
 
 		</main><!-- .site-main -->

@@ -1,7 +1,3 @@
-
-
-
-
 /* === Document Ready Scripts === */
 
 jQuery.noConflict();
@@ -29,47 +25,98 @@ jQuery.noConflict();
         });
     }
 
+    /* Responsive Navigation
+    ------------------------------------------------------------------------ */
+    function toggleMenu() {
+            $('.menu-toggle').click(function(){ 
+                    $(this).toggleClass('active');
+                    $('.small-menu').slideToggle();
+            });
+    }
+
+    function responsiveNav() {
+            if( $('.large-menu nav.primary').length ) {
+                    $('nav.primary').appendTo('.small-menu');
+            }        
+            $('.menu-toggle').removeClass('visuallyhidden');
+            $('.header-container').addClass('responsive-header').removeClass('desktop-header');
+    }
+     
+    function resetResponsiveNav() {
+            if( $('.small-menu').hasClass('open') ) {
+               
+            }
+    }
+     
+    function desktopNav() {
+            if( $('.small-menu nav.primary').length ) {
+                    $('nav.primary').appendTo('.large-menu');         
+            }
+            $('.menu-toggle').addClass('visuallyhidden');
+            $('.header-container').removeClass('responsive-header').addClass('desktop-header');
+    }
+
+    /* Gallery
+    ------------------------------------------------------------------------ */
+    // function galleryCaption() {
+    //     $('.gallery-item').click(function() {
+
+    //         var galleryId = $('figcaption').attr('aria-describedby');
+
+    //         console.log(galleryId);
+
+    //         $(this).find('figcaption').appendTo('.featherlight-content');
+
+    //         $('.featherlight-content .featherlight-close').click(function(){
+    //             $(this).find('figcaption').appendTo();
+    //             console.log('nested function');
+    //         });
+
+    //     });
+    // }
+       
+
   	instafeedInit();
     featherlightInit();
+    toggleMenu();
+    // galleryCaption();
 
-    $(window).setBreakpoints({
-    // use only largest available vs use all available
-        distinct: true, 
-    // array of widths in pixels where breakpoints
-    // should be triggered
-        breakpoints: [
-            320,
-            480,
-            768,
-            1024
-        ] 
-    });     
+    /* Enquire - Breakpoints
+    ------------------------------------------------------------------------ */
 
-    $(window).bind('enterBreakpoint320',function() {
-        
-    });
+    // Tablet
+    enquire.register("screen and (max-width:1000px)", {
 
-    $(window).bind('exitBreakpoint320',function() {
-        
-    });
+        match : function() {
+            responsiveNav();
+        },      
+        unmatch : function() {
+            desktopNav();
+            resetResponsiveNav();
+        },                          
+        setup : function() {
 
-    $(window).bind('enterBreakpoint768',function() {
-        
-    });
+        },    
+        deferSetup : true,
+        destroy : function() {}
+          
+    }); // end enquire.register
 
-    $(window).bind('exitBreakpoint768',function() {
+    // Exit Tablet
+    enquire.register("screen and (min-width:1001px)", {
 
-    });
-
-
-    $(window).bind('enterBreakpoint1024',function() {
-        
-    });
-
-    $(window).bind('exitBreakpoint1024',function() {
-        
-    });
-
+        match : function() {
+        },      
+        unmatch : function() {
+            
+        },    
+        setup : function() {
+            desktopNav();
+        },    
+        deferSetup : true,
+        destroy : function() {}
+          
+    }); // end enquire.register
 
 
   });

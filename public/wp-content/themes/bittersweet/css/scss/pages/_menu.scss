@@ -7,7 +7,6 @@
 .menu.entry-content {
 	margin: 0;
 }
-
 .menu-row {
 	text-align: center;
 }
@@ -20,15 +19,18 @@
 	
 	@include media($tablet) {
 		padding: 50px;
-		
 		height: 215px;
 		width: 395px;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
 
+	&.menu-pdf {
+		height: auto;
+		width: 100%;
+	}
+
 	&.cocktails {
-		
 		@include media($tablet) {
 			background-image: url('../img/bg_menu-cocktail.png');
 			width: 570px;
@@ -36,21 +38,18 @@
 	}
 
 	&.desserts {
-
 		@include media($tablet) {
 			background-image: url('../img/bg_menu-desserts.png');
 		}
 	}
 
 	&.coffee {
-		
 		@include media($tablet) {
 			background-image: url('../img/bg_menu-coffee.png');
 		}
 	}
 
 	&.morning {
-		
 		@include media($tablet) {
 			background-image: url('../img/bg_menu-morning.png');
 		}

@@ -3,21 +3,27 @@
 // Styles that help communicate success, warnings, failures, etc.
 //==================================================================
 
-// Chrome Frame - for unsupported versions of IE
-// =================================================================
-.chromeframe {
-
-	a {}
-
-}
-
-
 // Alerts
 // =================================================================
-.alert-box {
+.alert {
+	background: $brand_secondary;
+	color: $reverse_text_color;
+	text-align: center;
 
-	&.info {}
-	&.error {}
-	&.success {}
+	.alert-content {
+		padding: 12px;
 
+		a {
+			color: $reverse_text_color;
+			text-decoration: underline;
+
+			&:hover {
+				color: $reverse_text_color;
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+	}
 }

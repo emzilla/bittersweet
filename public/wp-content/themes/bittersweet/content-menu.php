@@ -14,7 +14,15 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( function_exists( 'ot_get_option' ) ) {
+		$menu_page_pdf = ot_get_option( 'menu_page_pdf' );} ?>
+	
 	<div class="menu entry-content">
+		<?php if($menu_page_pdf) :?>
+			<div class="menu-category menu-pdf">
+				<a href="<?php echo $menu_page_pdf; ?>" class="button cta-text">View Full Menu PDF</a>
+			</div>
+		<?php endif; ?>
 		<div class="menu-row">
 			<div class="menu-category cocktails">
 				<a href="/menu/cocktails" class="button cta-text">Cocktails</a>

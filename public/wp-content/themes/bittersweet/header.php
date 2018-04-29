@@ -20,11 +20,20 @@
 
 <div id="page" class="hfeed site">
 	<a class="skip-link visuallyhidden" href="#content"><?php _e( 'Skip to content' ); ?></a>
-
+	<?php if ( function_exists( 'ot_get_option' ) ) {
+				$top_banner_content = ot_get_option( 'top_banner_content' );} ?>
+	
+	<?php if($top_banner_content) :?>
+		<div class="alert">
+			<div class="wrapper">
+				<div class="alert-content">
+					<p><?php echo $top_banner_content; ?></p>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper">
-			
-			
 			<div class="site-branding">
 				<?php 
 				// Site Settings
@@ -36,9 +45,7 @@
 						</a>
 				
 			</div>
-			<div class="small-menu" style="display: none;">
-				
-			</div>
+			<div class="small-menu" style="display: none;"></div>
 			<a href="#menu" class="menu-toggle">Menu</a>
 			<div class="large-menu">
 				<?php if ( has_nav_menu('primary') ): ?>
